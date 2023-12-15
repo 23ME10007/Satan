@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Satan's choice</title>
+</head>
+<style>
+    header img{
+        width:50px;
+        border-radius: 50%;
+        position: sticky;
+        border: 3px solid rgb(55, 50, 205);
+        }
+        
+    header{
+        padding:10px 30px;
+        box-sizing:border-box;
+        
+    }
+    section{
+        width:100%vw;
+        height:100vh;
+
+    }
+    nav{
+        width:100%;
+        height:55px;
+        background-color:yellowgreen;
+        position: sticky;
+        
+        top: 0px;
+
+        border-top: 1px solid yellowgreen
+        }
+    nav ul{
+
+        display:flex;
+        margin: 0;
+        padding: 0 5px;
+        justify-content: center;
+       }
+    nav ul li{
+        list-style: none;
+    }  
+    nav ul li a{
+        display:block;
+        color:#081b29;
+        text-decoration: none;
+        padding:0 20px;
+        position: relative;
+        text-transform: uppercase;
+       line-height:50px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    nav ul li a:hover{
+        box-shadow: 0 -5px 0px #90b6d1;
+    }
+
+    .intro-container {
+      display: flex;
+      height: 80vh; 
+    }
+
+    .cover-page {
+      flex: 1;
+      background: url('logo1.jpg'); 
+      background-size:cover;
+      background-position: center;
+    }
+    
+
+    .bookshop-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .bookshop-title {
+      font-size: 40px;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: rgb(213, 161, 16);
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      
+    }
+
+    .subtitle {
+      font-size: 25px;
+      color: rgba(142, 211, 235, 0.68);
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .btn-best-selling {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: rgb(17, 50, 151);
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition:  0.3s;
+    }
+    .btn-best-selling:hover{
+        background-color: yellowgreen;
+        
+    }
+
+    .section2 {
+      text-align: center;
+      padding: 20px;
+      background-color: yellowgreen;
+      color: #081b29;
+      position: relative;
+      text-transform: uppercase;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .section h2 {
+      font-size: 15px;
+    }
+
+    .cards-container {
+      display: flex;
+
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .card {
+      width: 250px;
+      height: 450px;
+      margin: 20px;
+      background-color: aliceblue;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 12px;
+    }
+
+    .book-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #155d6482;
+    }
+
+    .book-type {
+      color: black;
+      position: relative;
+      top: 2px;
+      right: 10px;
+      left:0px;
+      bottom: 5px;
+    }
+
+    .book-discount {
+      color: green;
+      font-weight: bold;
+      top: 2px;
+      bottom: 2px;
+    }
+
+    .book-description {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .book-price {
+      margin-top: 10px;
+      font-weight: bold;
+      position: absolute;
+      
+      bottom: 10px;
+      right: 10px;
+      color: black;
+      
+    }
+    .feedback{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    .feedback-name{
+      position: absolute;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+
+    .add-button {
+      background-color: #3498db;
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    
+    
+    .description{
+      margin-left:15px;
+      position: relative;
+      color: rgb(213, 161, 16);
+      font-size: 12px;
+      top:0px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;.box {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .search-bar {
+      position: relative;
+      background-color: yellow;
+      width:100px;
+      height: 120px;
+      
+    }
+
+    .searchInput {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;;
+      width: 200px;
+      
+    }
+
+    .search-icon {
+      position: relative;
+      width:12px;
+      left:12px;
+      height:18px;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .search-icon:hover {
+      color: #3498db;
+    }
+    }
+    .container {
+      margin:25px 0 25px 0;
+      width:300px;
+      flex-wrap: wrap;
+      display: flex;
+      background-color: rgb(213, 161, 16);
+      
+      border-radius: 10px;
+      position: relative;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      
+    }
+    .container form{
+      width: 100%;
+      text-align: center;
+      padding: 25px 20px;
+      
+      
+
+
+    }
+    .form h5{
+      padding:10px 0;
+
+
+    }
+  
+    .form  .id{
+      position: relative;
+    }  
+    form input{
+      width:90%;
+      height: 25px;
+      padding-right: 3px;
+      margin:4px 0;
+      border:1px solid aqua; 
+      border-radius: 3px;
+      background-color: rgb(236, 238, 166);
+
+    }
+    .id i{
+      position:static;
+      font-size: 15px;
+      top:50%;
+      right:10px;
+      transform: translateX(-140%);
+      color: gray;
+
+
+
+    }
+    form textarea{
+      padding:5px 15px;
+      border:1px solid aqua;
+      border-radius: 3px;
+      background-color: rgb(236, 238, 166);
+      font-size: 15px;
+      width:90%;
+      margin:4px 2px;
+      font-size: 15px;
+
+
+
+    }
+    
+    form button{
+      margin:5px 0 0 0;
+      border:none ;
+      cursor: pointer;
+      background-color: aqua;
+      font-size: 15px;;
+      color: #081b29;
+      padding:10px 0;
+      width:90%;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    
+    
+    
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #081b29;
+   
+
+  }
+
+  footer {
+    background-color:yellowgreen;
+    
+    
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .social-icons {
+    margin-bottom: 20px;
+    
+  }
+
+  .social-icons a {
+    margin: 0 10px ;
+    color: #081b29;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 24px;
+
+    
+    
+  }
+  .social-icons a:hover{
+    color: rgb(17, 50, 151);
+    font-size: 30px;
+    
+  }
+  
+
+  .demo-links a {
+    display: block;
+    color: #081b29;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin: 0 18px 5px ;
+    transition: .2s;
+    display: inline;
+    font-size: 17px;
+    }
+  .demo-links a:hover{
+    color:rgb(17, 50, 151);
+    
+    
+    
+    
+    
+    }
+
+  #back-to-top {
+    margin-top: 15px;
+    
+    right: 20px;
+    color: aliceblue;
+    background-color: rgb(17, 50, 151);
+    border: 3px;
+    border-radius: 2%;
+    padding: 10px;
+    cursor:pointer;
+    font-size: 15px;
+    justify-content: center;
+    
+    
+   
+  }
+  
+</style>
+<body>
+  
+    <header>
+    <nav>
+        
+       <ul>
+        <li><img class="logo" src="logo1.jpg"></li>
+        <li><a href="#index.html" >Welcome</a></li>
+        <li><a href="#best-selling">Best-Selling</a></li>
+        <li><a href="#recommendation">Recommendations</a></li>
+        <li><a href="#review">Review</a></li>
+        
+        
+       </ul>
+    </nav>
+    <div class="intro-container">
+        <div class="cover-page"></div>
+        <div class="bookshop-info">
+          
+          <div class="bookshop-title">Satan's choice</div>
+          <div class="subtitle">Best books....One place</div>
+          <a href="#best-selling" class="btn-best-selling">Best Selling Books</a>
+        </div>
+      </div>
+    
+        
+
+    </header>
+
+    <div class="section2" id="best-selling">
+      <h2>Best Selling Books</h2>
+    </div>
+  
+    <div class="cards-container">
+      <div class="card">
+        <button class="add-button" type="submit">Add+</button>
+        <img src="After_2014_novel_cover.jpg" alt="Book 1">
+        <div class="card-content">
+          <div class="book-title">After-Anna Todd</div>
+          <div class="book-type">Romance,Fiction</div>
+          <div class="book-discount">Discount: -20%</div>
+          <div class="book-description">Tumultuous romance between Tessa and Hardin as they navigate love, passion, and challenges, with unexpected twists and turns testing the strength of their relationship</div>
+          <div class="book-price">$20</div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="add-button" type="submit">Add+</button>
+        <img src="twilight-7.jpg" alt="Book 2">
+        <div class="card-content">
+          <div class="book-title">Twilight-Stephanie Meyer</div>
+          <div class="book-type">Romance,Thriller,Fiction</div>
+          <div class="book-discount">Discount: -10%</div>
+          <div class="book-description">Bella Swan's life takes a supernatural turn when she falls in love with Edward Cullen, a vampire, leading to a complex and dangerous romance in the mysterious town of Forks</div>
+          <div class="book-price">$30</div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="add-button" type="submit">Add+</button>
+        <img src="kid2.jpg" alt="Book 3">
+        <div class="card-content">
+          <div class="book-title">365-Jataka Tales</div>
+          <div class="book-type">Kid stories,Fiction</div>
+          <div class="book-discount">Discount: -40%</div>
+          <div class="book-description">A Jataka series of 365 treats: stories, facts, questions and their answers and science experiments for young readers with inquisitive minds</div>
+          <div class="book-price">$21</div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="add-button" type="submit">Add+</button>
+        <img src="images.jpeg" alt="Book 4">
+        <div class="card-content">
+          <div class="book-title">Harry Potter and the Philosopher's Stone-J.K.Rowling</div>
+          <div class="book-type">Suspense,Fiction</div>
+          <div class="book-discount">Discount: -2%</div>
+          <div class="book-description">Young wizard Harry discovers his magical abilities and uncovers the mystery of the titular stone at Hogwarts School of Witchcraft and Wizardry</div>
+          <div class="book-price">$33</div>
+        </div>
+      </div>
+      <div class="card">
+        <button class="add-button" type="submit">Add+</button>
+        <img src="amrika.jpg" alt="Book 5">
+        <div class="card-content">
+          <div class="book-title">Barack Obama-Dreams from My Father</div>
+          
+          
+          <div class="book-type">Biography, Non-Fiction</div>
+          <div class="book-discount">Discount: -15%</div>
+          <div class="book-description">Life of Barack Obama as the first African American President of the United States, coupled with his emphasis on eloquent leadership style and the implementation of initiatives during his two terms in office</div>
+          
+          <div class="book-price">$56</div>
+        </div>
+      </div>
+      
+      
+  
+      
+  
+    </div>
+    <div class="section2" id="recommendation">
+      <h2>Recommendations</h2>
+      
+        <div class="search-bar">
+          <input type="text" class="searchInput" placeholder="Your favourite books...">
+          <label for="searchInput" class="search-icon"><i class='bx bx-search-alt-2'></i></label>
+        </div>
+        </div>
+
+      
+      
+    </div>
+    
+    <div class="description">
+    <h3>Those who read the Best-Selling also read:</h3>
+    </div>
+    <div class="cards-container">
+    <div class="card">
+      <button class="add-button" type="submit">Add+</button>
+      <img src="Michelle_Obama.jpg" alt="Book 1">
+      <div class="card-content">
+        <div class="book-title">Becoming-Michelle Obama</div>
+        
+        
+        <div class="book-type">Biography, Non-Fiction</div>
+        <div class="book-discount">Discount: -35%</div>
+        <div class="book-description">Michelle Obama's biography, titled "Becoming," provides insight into her life, experiences, and perspectives as the Former First Lady of United States</div>
+        
+        <div class="book-price">$46</div>
+      </div>
+    </div>
+    <div class="card">
+      <button class="add-button" type="submit">Add+</button>
+      <img src="chamber.jpg" alt="Book 2">
+      <div class="card-content">
+        <div class="book-title">Harry Potter and The Chamber of Secrets-J.K.Rowling</div>
+        
+        
+        <div class="book-type">Mystery,Fiction</div>
+        <div class="book-discount">Discount: -9%</div>
+        <div class="book-description">Harry Potter and the Chamber of Secrets follows Harry's second year at Hogwarts as he uncovers the mystery behind a series of petrifications and the legend of the Chamber of Secrets.</div>
+        
+        <div class="book-price">$39</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <button class="add-button" type="submit">Add+</button>
+      <img src="twilight2.jpg" alt="Book 3">
+      <div class="card-content">
+        <div class="book-title">New Moon:Book 2 Of Twilight Saga-Stephanie Meyer</div>
+        
+        
+        <div class="book-type">Romance,Fiction</div>
+        <div class="book-discount">Discount: -29%</div>
+        <div class="book-description">Bella Swan navigates heartbreak and risks as she becomes entangled in the supernatural world, following Edward Cullen's departure and forming a deep connection with Jacob Black</div>
+        
+        <div class="book-price">$40</div>
+      </div>
+    </div>
+    <div class="card">
+      <button class="add-button" type="submit">Add+</button>
+      <img src="twilight3.jpg" alt="Book 4">
+      <div class="card-content">
+        <div class="book-title">Eclipse:Book 3 Of Twilight Saga-Stephanie Meyer</div>
+        
+        
+        <div class="book-type">Romance,Fiction</div>
+        <div class="book-discount">Discount: -23%</div>
+        <div class="book-description">Bella Swan faces a dangerous choice between her love for Edward Cullen and her friendship with Jacob Black, while a vengeful vampire army threatens their peaceful existence</div>
+        
+        <div class="book-price">$41</div>
+      </div>
+    </div>
+    <div class="card">
+      <button class="add-button" type="submit">Add+</button>
+      <img src="before.jpg" alt="Book 5">
+      <div class="card-content">
+        <div class="book-title">Before</div>
+        
+        
+        <div class="book-type">Romance,Fiction</div>
+        <div class="book-discount">Discount: -63%</div>
+        <div class="book-description">Anna Todd's 'Before' explores the turbulent prequel to the passionate love story of Tessa and Hardin in the aftermath of their complex journey in the 'After' series</div>
+        
+        <div class="book-price">$13</div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <button class="add-button" type="submit">Add+</button>
+      <img src="story2.jpeg" alt="Book 6">
+      <div class="card-content">
+        <div class="book-title">Panchatantra</div>
+        
+        
+        <div class="book-type">Children,Fiction</div>
+        <div class="book-discount">Discount: -43%</div>
+        <div class="book-description">A compilation of 365 stories taken from the famous Panchatantra</div>
+        
+        <div class="book-price">$12</div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="section2" id="review">
+    <h2>Review</h2>
+    </div>
+    <div class="cards-container">
+      <div class="card">
+        <img src="wm1.jpeg" alt="im1">
+        <div class="card-content">
+          <div class="feedback">"It is a well-designed website. Kudos to the UI/UX developers."</div>
+          <div class="feedback-name">-Amisha Chatterjee</div>
+        </div>
+
+      </div>
+      
+    
+    
+      <div class="card">
+        <img src="wm2.jpeg" alt="im2">
+        <div class="card-content">
+          <div class="feedback">"There could be more variety of genres of books available on the website.The navigation bar is not aligned properly. Rest all is good"</div>
+          <div class="feedback-name">-Ansen D'Souza</div>
+        </div>
+
+      </div>
+      
+    
+    
+      <div class="card">
+        <img src="m2.jpeg" alt="im3">
+        <div class="card-content">
+          <div class="feedback">"These books help a lot in enhancing the vocabulary of readers. The website is well designed."</div>
+        <div class="feedback-name">-Jace Davis</div>
+        </div>
+
+      </div>
+      
+      
+    
+    
+      <div class="card">
+        <img src="m1.jpeg" alt="im4">
+        <div class="card-content">
+          <div class="feedback">"Books are great.Great discounts.Nominal prices and an amazing developer. What else is needed!"</div>
+          <div class="feedback-name">-Vincent Russo</div>
+        </div>
+
+      </div>
+      
+    </div>
+    <div class="container">
+      <form>
+        <h5>Give your Feedback</h5>
+          <div class="id">
+            <input type="text" placeholder="Enter your Name" >
+            <i class='bx bxs-user' ></i>
+          </div>
+          <div class="id">
+            <input type="email" placeholder="Enter your Email-address">
+            <i class='bx bxs-envelope' ></i>
+          </div>
+          <textarea cols="20" rows="5" placeholder="Your Feedback:"></textarea>
+          <button class="submit">Submit</button>
+        </form>
+    </div>
+    
+    <footer>
+        <div class="social-icons">
+          
+          <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+          <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+          <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+        </div>
+    
+        <div class="demo-links">
+          
+          <a href="#" target="_blank">Terms and Conditions</a>
+          <a href="#" target="_blank">Privacy Policy</a>
+          <a href="#" target="_blank">Copyright Information</a>
+        </div>
+    
+        
+        <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
+      </footer>
+    
+      <script>
+        
+        window.onscroll = function() {
+          scrollFunction();
+        };
+    
+        function scrollFunction() {
+          var btn = document.getElementById("back-to-top");
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btn.style.display = "block";
+          } else {
+            btn.style.display = "none";
+          }
+        }
+    
+        function scrollToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+    </body>
+    
+</body>
+</html>
